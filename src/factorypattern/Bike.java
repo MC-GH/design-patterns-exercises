@@ -1,34 +1,22 @@
 package factorypattern;
 
 public abstract class Bike {
+    private int weightInKg;
+    private int maxSpeedInKmH;
+    private int amountOfGears;
 
-    public Bike() {
+    public Bike(int weightInKg, int maxSpeedInKmH, int amountOfGears) {
+        this.weightInKg = weightInKg;
+        this.maxSpeedInKmH = maxSpeedInKmH;
+        this.amountOfGears = amountOfGears;
     }
 
-    public void ride() {
+    public abstract void clean();
 
-    }
-
-    public void clean() {
-
-    }
-
-    public void race() {
-
-    }
+    public abstract void race();
 
     public void ringBell() {
         System.out.println("Tring Tring");
-    }
-
-    public abstract int getWeightInKg();
-    public abstract int getMaxSpeed();
-    public abstract int getAmountOfGears();
-
-
-    @Override
-    public String toString() {
-        return "Weight in kg: " + getWeightInKg() + " Max Speed: " + getMaxSpeed() + " amount of gears: " + getAmountOfGears();
     }
 
 }

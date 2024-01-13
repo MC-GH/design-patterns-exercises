@@ -1,42 +1,18 @@
 package factorypattern;
 
 public class CityBike extends Bike{
-    private int weightInKg;
-    private int maxSpeed;
-    private int amountOfGears;
-    public CityBike(int weightInKg, int maxSpeed, int amountOfGears) {
-        this.weightInKg = weightInKg;
-        this.maxSpeed = maxSpeed;
-        this.amountOfGears = amountOfGears;
+    public CityBike(int weightInKg, int maxSpeedInKmH, int amountOfGears) {
+        super(weightInKg, maxSpeedInKmH, amountOfGears);
     }
 
-    @Override
-    public void ride() {
-        super.ride();
-    }
-
-    @Override
+     @Override
     public void clean() {
-        super.clean();
+         System.out.println("You clean your citybike, it's not very dirty.");
     }
 
     @Override
     public void race() {
-        super.race();
+        System.out.println("You try and race a colleague, but he is much faster.");
     }
 
-    @Override
-    public int getWeightInKg() {
-        return this.weightInKg;
-    }
-
-    @Override
-    public int getMaxSpeed() {
-        return this.maxSpeed;
-    }
-
-    @Override
-    public int getAmountOfGears() {
-        return this.amountOfGears;
-    }
 }
